@@ -9,11 +9,10 @@ db = pymysql.connect(
     charset="utf8"
 )
 cursor = db.cursor()
-sql = """CREATE TABLE rating_multi_table (
-   user_id CHAR(20),
-   movie_id CHAR(20),
-   rating int,
-   timestamp int
+# create top_movie_table
+sql = """CREATE TABLE top_movie_id_table_test (
+   movie_id CHAR(20) PRIMARY KEY,
+   movie_id_isCrawled int
 )"""
 db.ping(reconnect=True)
 

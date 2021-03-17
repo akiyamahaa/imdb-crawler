@@ -29,7 +29,7 @@ wait = WebDriverWait(driver, 10)
 
 
 def get_info_review_rating(soup, uid):
-    print('Process for user....', uid)
+    print('Processing for user....', uid)
     for elem in soup.find_all(class_='mode-detail'):
         movie_titleId_link = elem.find(class_='lister-item-header').a.get('href')
         # info movie
